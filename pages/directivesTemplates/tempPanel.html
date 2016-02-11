@@ -1,0 +1,9 @@
+<div class="panel" ng-class="{'panel-primary': freezing, 'panel-info': cold, 'panel-warning': hot, 'panel-default': normal, 'panel-danger': superhot}">
+    <div class="panel-heading">
+        <h3 class="panel-title">{{ convertDate({date: weatherDay.dt }) | date: dateFormat }}</h3>
+    </div>
+    <div class="panel-body">
+        Temperatura durante o dia: {{ convertToStandard({daytimeTemp: weatherDay.temp.day }) }}º C
+        <br> Descrição: {{weatherDay.weather[0].description}}
+    </div>
+</div>

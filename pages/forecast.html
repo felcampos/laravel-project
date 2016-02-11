@@ -1,0 +1,17 @@
+<p>
+
+    <a href="#/">Voltar para Busca</a>
+
+</p>
+
+<h1>Previsão do Tempo para {{city}} - {{days}} dias</h1>
+<hr>Dias: <a href="#/forecast/2" ng-class="{ 'bg-primary': days === '2'}">2</a> | <a href="#/forecast/5" ng-class="{ 'bg-primary': days === '5'}">5</a> | <a href="#/forecast/7" ng-class="{ 'bg-primary': days === '7'}">7</a>
+<hr>
+
+<div ng-repeat="w in weatherResult.list">
+    <div class="row">
+        <div clas="col-md-12">
+            <temp-panel weather-day="w" convert-to-standard="convertToCelcius(daytimeTemp)" convert-date="convertToDate(date)" date-format="dd/MM/yyyy"></temp-panel>
+        </div>
+
+    </div>

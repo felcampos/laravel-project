@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <h4>Previsão do tempo </h4>
+        <form ng-submit="submit(dias)">
+            <div class="form-group">
+                <input type="text" class="form-control" ng-model="city" placeholder="Qual cidade? ">
+            </div>
+            <div class="form-group">
+                <select name="dias" id="dias" ng-model="dias" class="form-control" ng-model="dias">
+                    <option value="">Quantos dias?</option>
+                    <option value="2">2 Dias</option>
+                    <option value="5">5 Dias</option>
+                    <option value="7">7 Dias</option>
+                </select>
+            </div>
+            <input type="submit" value="{{verificarPreenchimento(city, dias)}}" class="btn btn-primary" ng-disabled="!dias || !city">
+        </form>
+    </div>
+</div>
